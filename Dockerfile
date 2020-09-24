@@ -1,7 +1,5 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 
-EXPOSE 80
-
 WORKDIR /app
 
 COPY MyWebApp/ ./MyWebApp
@@ -16,3 +14,7 @@ RUN dotnet build MyWebAppCore/MyWebAppCore.csproj -c release -f netcoreapp3.1 -o
 WORKDIR /out
 
 ENTRYPOINT ["dotnet", "MyWebApp.dll"]
+
+ENV ASPNETCORE_URLS=http://0.0.0.0:80
+
+EXPOSE 80
