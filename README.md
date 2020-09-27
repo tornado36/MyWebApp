@@ -9,19 +9,27 @@ The preliminary design is back-end will run in a container (microservice) in Azu
 
 ## build the back-end: 
 
-**docker build -t health-tracker-processor:latest .
+```bash
+docker build -t health-tracker-processor:latest .
+```
 
 ## set up the  latest PostgreSQL container: 
 
-**docker pull postgres:latest
+```bash
+docker pull postgres:latest
+```
 
 ## launch PostgreSQL: 
 
-**docker run -p 5432:5432/tcp --hostname hardcore-eric --name my-web-pgsql --env POSTGRES_PASSWORD=postgres postgres
+```bash
+docker run -p 5432:5432/tcp --hostname hardcore-eric --name my-web-pgsql --env POSTGRES_PASSWORD=postgres postgres
+```
 
 ## Get the IP address of PostgreSQL container:
 
-**Then use docker inspect <CONTAINERID>
+```bash
+Then use docker inspect <CONTAINERID>
+```
 
 ## Change the IP address of DBConnectionStr in
  
@@ -29,4 +37,6 @@ The preliminary design is back-end will run in a container (microservice) in Azu
 
 ## Launch application: 
 
-**docker run -rm -p 80:80/tcp health-tracker-processor:latest
+```bash
+docker run -rm -p 80:80/tcp health-tracker-processor:latest
+```
