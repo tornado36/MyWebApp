@@ -29,3 +29,4 @@ The preliminary design is back-end will run in a container (microservice) in Azu
 ## Launch application: 
 
 > docker run -rm -p 80:80/tcp health-tracker-processor:latest
+
