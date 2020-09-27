@@ -12,5 +12,10 @@ namespace MyWebApp.Enum
             Sandbox = 0,
             Application = 1,
         }
+        public enum Gender
+        {
+            Female = 0,
+            Male = 1,
+        }
     }
 }

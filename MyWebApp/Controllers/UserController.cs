@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
+using static MyWebApp.Enum.MyWebAppEnum;
 
 namespace MyWebApp.Controllers
 {
@@ -53,7 +54,8 @@ namespace MyWebApp.Controllers
                     User newuser = new User()
                     {
                         Username = input.Username,
-
+                        Height = input.Height,
+                        Gender = input.Gender
                     };
                     await Task.Run(() =>
                     {
@@ -154,6 +156,8 @@ namespace MyWebApp.Controllers
         public class UserInput
         {
             public string Username { get; set; }
+            public double Height { get; set; }
+            public Gender Gender { get; set; }
         }
     }
 
